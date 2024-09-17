@@ -1,9 +1,4 @@
-# Para a password ser aprovada é necessário no minimo:
-    ## 1 LETRA GRANDE
-    ## 1 letra pequena
-    ## 1 numero
-    ## 1 char especial
-    ## 8 caracteres
+import getpass
 
 def password(pw):
     pw_upper = any(rules.isupper() for  rules in pw)
@@ -22,6 +17,6 @@ def password(pw):
         print('Insucesso')  
 
 
-pw = input('Password')
+pw = getpass.getpass(prompt='Password: ')
 
 password(pw)
